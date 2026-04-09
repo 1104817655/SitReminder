@@ -69,6 +69,17 @@ python main.py
 说明：
 - 已配置应用图标：`resources\icon.ico`
 - 打包脚本会自动把 `resources` 目录打进产物
+- 这是目录版（onedir），分发时需要整个 `dist\SitReminder\` 文件夹一起拷贝
+
+## EXE 构建模式
+- 目录便携版（推荐稳定性）：
+  - 脚本：`build_exe_portable.bat`
+  - 产物：`dist\SitReminder\SitReminder.exe`
+  - 分发方式：打包整个 `dist\SitReminder\` 文件夹
+- 单文件版（便于分发）：
+  - 脚本：`build_exe_single.bat`
+  - 产物：`dist\SitReminder.exe`
+  - 分发方式：可直接发送单个 exe（首次启动稍慢是正常现象）
 
 ## 生成安装包（Inno Setup）
 1. 先执行 `build_exe.bat`。
@@ -143,6 +154,8 @@ SitReminder/
 ├─ requirements.txt
 ├─ run.bat
 ├─ build_exe.bat
+├─ build_exe_portable.bat
+├─ build_exe_single.bat
 ├─ build_installer.bat
 ├─ build_all.bat
 ├─ SitReminder.md
